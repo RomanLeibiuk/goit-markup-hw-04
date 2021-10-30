@@ -114,14 +114,16 @@ body {
 }
 /* ==================Стилизация списка contacts ===============*/
 .contacts {
-  display: flex;
+  display: inline-flex;
+  align-items: center;
   margin-left: auto;
 }
 .contacts .item + .item {
   margin-left: 50px;
 }
 .contacts .link {
-  display: block;
+  display: inline-flex;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -135,6 +137,21 @@ body {
 .contacts .link:hover {
   color: var(--accent-color);
 }
+.contacts .link::before {
+  width: 16px;
+  height: 16px;
+  content: '';
+  margin-right: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.contacts .mail-icon::before {
+  background-image: url(../images/bg/envelope.svg);
+}
+.contacts .tel-icon::before {
+  background-image: url(../images/bg/smartphone.svg);
+}
 
 /* ==================Стилизация секции hero===============*/
 /* смена фона секции Hero и Футера */
@@ -143,6 +160,15 @@ body {
   background-color: var(--bg-one);
 }
 .hero {
+  min-height: 600px;
+  max-width: 1600px;
+  margin-right: auto;
+  margin-left: auto;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../images/bg/bg-img-header.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   text-align: center;
   padding: 200px 0;
 }
@@ -221,6 +247,28 @@ body {
 }
 .feat-list .item:nth-last-child(-n + 1) {
   margin: 0;
+}
+.feat-list .item::before {
+  content: '';
+  display: inline-flex;
+  width: 270px;
+  height: 120px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  background-color: var(--button-bg-color);
+}
+.feat-list .perception::before {
+  background-image: url(../images/bg/antenna\ 1.svg);
+}
+.feat-list .punctuation::before {
+  background-image: url(../images/bg/clock\ 1.svg);
+}
+.feat-list .planning::before {
+  background-image: url(../images/bg/diagram\ 1.svg);
+}
+.feat-list .hightech::before {
+  background-image: url(../images/bg/astronaut\ 1.svg);
 }
 /* ==================Стилизация  секции Чем мы занимаемся ===============*/
 
