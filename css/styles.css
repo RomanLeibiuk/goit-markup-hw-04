@@ -22,6 +22,7 @@
   --bg-two: #e5e5e5;
   --bg-three: #f5f4fa;
   --logo-color: #afb1b8;
+  --button-hover: #188ce8;
 }
 
 body {
@@ -201,6 +202,11 @@ body {
   letter-spacing: 0.06em;
   text-align: center;
   cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+  background-color: var(--button-hover);
 }
 /* ==================Стилизация features ===============*/
 .job-title,
