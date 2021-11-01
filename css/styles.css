@@ -138,8 +138,6 @@ body {
 
 .contacts-link .contacts-icon,
 .contacts-link .contacts-icon {
-  width: 20px;
-  height: 20px;
   margin-right: 10px;
   fill: #757575;
 }
@@ -304,8 +302,9 @@ body {
 
 .member-name {
   padding-top: 30px;
-  padding-bottom: 16px;
+  padding-bottom: 30px;
 }
+
 .crew-list .title {
   margin: 0;
   margin-bottom: 10px;
@@ -327,10 +326,11 @@ body {
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
   text-align: center;
+  margin-bottom: 16px;
 }
 .social-icon-list {
-  display: inline-flex;
-  padding: 0 32px 30px 32px;
+  display: flex;
+  justify-content: center;
 }
 
 .social-icon-list .social-item:not(:last-child) {
@@ -382,6 +382,9 @@ body {
 /* ==================Стилизация адреса  ===============*/
 .footer-container {
   display: flex;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  align-items: baseline;
 }
 
 .address .link {
@@ -412,19 +415,12 @@ body {
 .ad-list .item:nth-last-child(-n + 1) {
   margin: 0;
 }
-.address-container {
-  padding-bottom: 60px;
-  padding-top: 60px;
-}
+
 .social-container {
   margin-left: 70px;
-  padding-top: 72px;
-  padding-bottom: 100px;
-  width: 206px;
-  height: 80px;
-  align-items: center;
 }
 .social-container .text {
+  text-transform: uppercase;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -536,8 +532,12 @@ body {
 .works .item:nth-last-child(-n + 3) {
   margin-bottom: 0;
 }
-.works .item:hover,
-.works .item:focus {
+.works .link {
+  display: block;
+  text-decoration: none;
+}
+.works .link:hover,
+.works .item.link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
